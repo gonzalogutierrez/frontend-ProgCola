@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
         private alertService: AlertService) {
             this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
             //this.project = JSON.parse(localStorage.getItem('projects'));
-            this.projects = JSON.parse(localStorage.getItem('projects')) || [];
+            //this.projects = JSON.parse(localStorage.getItem('projects')) || [];
         }
 
     ngOnInit() {
@@ -51,6 +51,7 @@ export class HomeComponent implements OnInit {
         this.projectService.allProject()
         .subscribe(
             data => {
+                this.projects = JSON.parse(localStorage.getItem('projects')) || [];
                 //this.router.navigate([this.returnUrl]);
                 //this.alertService.success("Elige un proyecto");
             },
