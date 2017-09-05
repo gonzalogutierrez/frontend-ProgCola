@@ -1,0 +1,49 @@
+﻿
+
+
+    
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Hola {{currentUser.name}}!</h1>
+            <p>Bienvendio a Programacion Colaborativa</p>
+            <h3>Proyectos registrados:</h3>
+            <!--<ul>
+                <li *ngFor="let project of projects">
+                    {{project.title}} ({{project.description}} {{project.price}})
+                    - <a (click)="deleteUser(project.id)">Concretar</a>
+                </li>
+            </ul>-->
+            <!--<p><a [routerLink]="['/login']">Logout</a></p>-->
+        </div>
+
+            <div class="row productContainer">
+                
+
+                                
+                                <div class="col-md-12 product" *ngFor="let project of projects">
+                                    <div class="col-md-4">
+                                        <img height="200" width="150" src="{{project.image}}">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="col-md-8">
+                                            <h3 class="productName">{{project.name}}</h3>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h3 class="productPrice">{{project.price}} USD</h3> 
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p class="productDescription" >{{project.description}}</p>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <a class="btn btn-primary" (click)="paypal(project.price,project.id,project.name)">Concretar</a>
+                                         </div>
+                                    </div>                   
+                                </div>
+                                  
+
+                        </div>
+
+
+
+
+            
+        

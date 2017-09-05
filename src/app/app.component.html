@@ -1,0 +1,38 @@
+﻿<div class="row">
+    <div class="header">
+        <div class="col-md-12">
+            <ul class="navigator">
+                <li>
+                    <a href="/home" title="Home">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['/login']" title="Logout">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <alert></alert>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<!-- credits -->
+<div class="text-center">
+    <p>
+        <a>PROGRAMACION COLABORATIVA</a>
+    </p>
+    <p>
+        <a>Todos los derechos reservados</a>
+    </p>
+</div>
