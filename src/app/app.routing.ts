@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     { path: 'execute', component: PaypalComponent },
 
     // otherwise redirect to home
-    //{ path: '**', redirectTo: '' }
+    { path: '**', redirectTo: 'home' }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
